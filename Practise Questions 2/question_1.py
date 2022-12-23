@@ -1,5 +1,5 @@
 # COMP9021 20T3 - Rachid Hamadi
-# Sample Exam Question 1 - Sample Solution
+# Sample Exam Question 1
 
 
 from random import seed, randint

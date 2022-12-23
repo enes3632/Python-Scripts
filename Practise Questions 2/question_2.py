@@ -1,6 +1,5 @@
 # COMP9021 20T3 - Rachid Hamadi
-# Sample Exam Question 2 - Sample Solution
-
+# Sample Exam Question 2
 
 '''
 Write a function that accepts a strictly positive integer and displays its binary representation
