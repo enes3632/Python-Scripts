@@ -1,10 +1,5 @@
 #!/usr/bin/python3
 
-# Terminal/Command Prompt instructions
-# copy/paste/tab/enter--> cd C:\Users\eness\Desktop\UTS\#Subjects\2023-1-Autumn
-# copy/paste/tab/enter--> cd A
-# copy/paste---> C:/Users/eness/AppData/Local/Microsoft/WindowsApps/python3.8.exe "hosts.py" -v file.txt
-
 import sys,re,os
 
 if len(sys.argv) in [1,2] or sys.argv[1] not in ['-a','-d','-c','-v'] or (sys.argv[1] in ['-d','-c'] and len(sys.argv)<4):
@@ -24,11 +19,11 @@ def task_4(option):
         for line in f:
             line = line.rstrip('\n')
             x=re.split('\s+',line)
-            print(x)
+            
             if x:
                 if count==0:
                     print('Hostnames:')
-                print(f'<{x[1]}>')
+                print(f'{x[1]}')
                 count+=1
 
         if count==0:
@@ -78,8 +73,11 @@ def task_6(class_,file_):
                     print(line)
                     count+=1
             
-        if count==0:
+        if count==0 and class_ in ['A','B','C']:
             print('No hosts in the given class')
+            
+        elif count==0:
+            print('Class has to be one of these: A, B, C.')
 
     except:
         print('File is not accessible')
@@ -97,7 +95,7 @@ elif sys.argv[1]=='-c':
 elif sys.argv[1]=='-v':
     try:
         f = open(sys.argv[2])
-        print('Enes Sahin 14051662 12/05/2023')
+        print('Enes Sahin 14051662 13/05/2023')
     except:
         print('File is not accessible')
         sys.exit()
